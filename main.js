@@ -4,7 +4,7 @@ let kmPercorso = prompt("Quanti km vuoi percorrere?");
 let etaPasseggero = prompt("Quanti anni hai?");
 let prezzoBase = (kmPercorso*0.21);
 
-//Definizion
+//Definizione variabili utili
 let prezzoOver = 0;
 let prezzoUnder = 0;
 
@@ -20,7 +20,8 @@ if (etaPasseggero <= 18){
     document.writeln('Il prezzo del tuo biglietto è ' + prezzoOver + '€');
     console.log('Prezzo biglietto over 65 ' + prezzoOver + '€');
 } else{
+    prezzoBase=prezzoBase.toFixed(2)
     document.writeln('Il prezzo del tuo biglietto è ' + prezzoBase + '€');
 }
 
-console.log('Prezzo del biglietto se non soggetto a sconti ' + prezzoBase + '€');
+console.log('Prezzo del biglietto se non soggetto a sconti ' + prezzoBase.toFixed(2) + '€');
